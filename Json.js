@@ -8,10 +8,13 @@
         },
     
         "datos laborales": {
-        "1": "1"
+        "Simplia": "1",
+        "Prosegur": "1",
+        "Policía de la provincia de buenos Aires":"1"
         },
         "estudios": {
-        "1": "1"
+            "Universidad Nacional del Sur": "Contadora pública (sin terminar)",
+            "Instituto 48": "Soporte Operativo para PC"
         },
         "habilidades duras": {
         "1": "1"
