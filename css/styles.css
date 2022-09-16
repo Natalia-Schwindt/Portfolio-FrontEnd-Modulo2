@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:wght@300;400;700&family=Roboto+Slab:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.sectionSocNet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  top: 5px;
+  padding: 5px;
+}
+
+.socialNetworks a {
+  color: rgb(57, 6, 176);
+}
+.socialNetworks button {
+  background-color: rgb(57, 6, 176);
+  padding: 2px 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: #fff;
+}
+
+header {
+  background-image: -webkit-linear-gradient(top left, rgba(0, 0, 255, 0.9), rgba(255, 0, 0, 0.9));
+  height: 400px;
+  margin: 0 0 150px;
+}
+
+.contentLogoLogin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  top: 10px;
+  margin: 10px;
+}
+.contentLogoLogin div {
+  width: 50%;
+}
+.contentLogoLogin div img {
+  width: 20%;
+}
+.contentLogoLogin div p {
+  margin-left: 10px;
+  color: #fff;
+}
+.contentLogoLogin div form {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+.contentLogoLogin div form input {
+  width: 150px;
+  height: 25px;
+  margin: 0 10px 0 0;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.contentLogoLogin div form button {
+  background-color: rgb(57, 6, 176);
+  width: 50px;
+  height: 25px;
+  padding: 2px 5px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.contentProfile {
+  position: relative;
+  top: 235px;
+  bottom: 25px;
+  left: 15px;
+  width: 190px;
+}
+.contentProfile img {
+  position: relative;
+  top: 5px;
+  bottom: 30px;
+  left: 15px;
+  width: 150px;
+  border-radius: 50%;
+}
+.contentProfile button {
+  background-color: rgb(55, 39, 235);
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  color: #fff;
+}
+.contentProfile h3 {
+  text-align: center;
+}
+.contentProfile p {
+  font-weight: 500;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 20px);
+  margin: 10px;
+  padding: 0 0 20px 0;
+}
+.sectionHeader h2 {
+  padding: 15px;
+}
+.sectionHeader div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+}
+.sectionHeader div button {
+  background-color: rgb(55, 39, 235);
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.sectionBody {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin: 10px;
+}
+.sectionBody ul {
+  padding-left: 10px;
+}
+.sectionBody div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 10px;
+  margin: 0 auto;
+}
+.sectionBody div h3 {
+  width: 90%;
+  text-align: center;
+}
+.sectionBody div div ul {
+  margin: 15px 0;
+}
+.sectionBody div div p {
+  margin: 15px 0;
+}
+.sectionBody div div a {
+  width: 90%;
+  text-align: center;
+}
+.sectionBody div div div {
+  width: 90%;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.margenInf {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+}
+
+.sectionExpLab {
+  background-color: #c86eec;
+}
+
+.sectionProyectos {
+  background-color: #c86eec;
+}
+
+footer {
+  width: 100%;
+  margin: 25px 0 10px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

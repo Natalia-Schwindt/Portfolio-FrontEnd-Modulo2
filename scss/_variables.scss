@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:wght@300;400;700&family=Roboto+Slab:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+// family font 
+$fontTitle: 'Roboto', sans-serif;
+$fontSubTitle: 'Roboto Condensed', sans-serif;
+$fontParagraph: 'Roboto Slab', serif;
+
+// color
+$colorPrimary: #000;
+$colorSecondary: #fff;
+$colorTertiary: rgb(57, 6, 176);
+$colorQuaternary: rgb(55, 39, 235);
+$colorQuinary: #c86eec;
+
+// font size
+$fontSizeTitle: 32px;
+$fontSizeSubTitle: 24px;
+$fontSizeParagraph: 16px;
+$fontSizeText: 12px;
+
+// font weight
+$fontWeightTitle: 700;
+$fontWeightSubTitle: 500;
+$fontWeightParagraph: 400;
+$fontWeightBold: 300;
+
+// border radius
+$borderRadiusButton: 5px;
+$borderRadiusAvatar: 50%;
+
+// border box
+$borderBox: 1px solid #000;
+
+// padding
+$paddingBorder: 5px;
+$paddingBorderM: 10px;
+$paddingBorderL: 15px;
+$paddingButton: 2px 5px;
+//$paddingSocNet: 0px 5px;
+
+// margin
+$marginXXs: 5px;
+$marginXs: 10px;
+//$marginExpLab: 5px auto;
+$marginS: 15px;
+$marginM: 20px;
+$marginL: 25px;
+//$marginXL: 50px;
+
+// width
+$width: 100%;
+$widthForm: 50%;
+$widthLogoArgProg: 20%;
+//$widthLogoArgProgM: 30%;
+$widthInput: 150px;
+//$widthButton: 20px;
+$widthButtonS: 25px;
+$widthLogin: 50px;
+$widthAvatar: 150px;
+$widthSectionS: 25%;
+$widthSection: 90%;
+
+// height
+$heightSection: 400px;
+//$heightContainer: 100%;
+//$heightButtonXs: 20px;
+$heightButton: 25px;
+
+// media query
+$breakpointMobile: 480px;
+$breakpointTablet: 768px;
+$breakpointDesktop: 1024px;
+
+// background color
+$backgroundColor: -webkit-linear-gradient(top left, rgba(0, 0, 255, .9), rgba(255, 0, 0, .9));
+
+// position
+//$positionFather: absolute;
+$positionChild: relative;
+
+// overflow
+//$overflow: hidden;
+
+// cursor
+//$cursor: pointer;
+
+// visibility
+//$visibilityTrue: visible;
+//$visibilityFalse: hidden;
+
+// text shadow
+//$textShadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+// text indent
+//$textIndent: 25px;
+
+// box shadow
+//$boxShadow: 0 0 10px rgba(0, 0, 0, 0.5);

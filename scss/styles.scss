@@ -1,0 +1,135 @@
+@use 'variables';
+@use 'mixins';
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.sectionSocNet{
+        @include mixins.flexBox(row, space-between);
+        @include mixins.position(variables.$positionChild, 5px);
+        padding: 5px;
+}
+.socialNetworks{
+    & a{
+        color: variables.$colorTertiary;
+    }
+    & button{
+        @include mixins.container(variables.$colorTertiary, unset, unset, unset, variables.$paddingButton, variables.$borderBox, variables.$borderRadiusButton);
+        color: variables.$colorSecondary;
+    }
+}
+header{
+    background-image: variables.$backgroundColor;
+    @include mixins.container(unset, unset, variables.$heightSection, 0 0 150px);
+}
+.contentLogoLogin{
+    @include mixins.flexBox(row, space-around);
+    @include mixins.position(variables.$positionChild, 10px);
+    margin: variables.$marginXs;
+    & div{
+        width: variables.$widthForm;
+        & img{
+            width: variables.$widthLogoArgProg;
+        }
+        & p{
+            margin-left: variables.$marginXs;
+            color: variables.$colorSecondary;
+        }
+        & form{
+            @include mixins.flexBox(row, right);
+            & input{
+                @include mixins.container(unset, variables.$widthInput, variables.$heightButton, 0 variables.$marginXs 0 0, variables.$paddingBorder, variables.$borderBox, variables.$borderRadiusButton);
+            }
+            & button{
+                @include mixins.container(variables.$colorTertiary, variables.$widthLogin, variables.$heightButton, unset, variables.$paddingButton, variables.$borderBox, variables.$borderRadiusButton);
+                color: variables.$colorSecondary;
+            }
+        }
+    }    
+}
+.contentProfile{
+    @include mixins.position(variables.$positionChild, 235px, unset, 25px, 15px);
+    width: 190px;
+    & img{
+        @include mixins.position(variables.$positionChild, 5px, unset, 30px, 15px);
+        width: variables.$widthAvatar;
+        border-radius: variables.$borderRadiusAvatar;
+    }
+    & button{
+        @include mixins.container(variables.$colorQuaternary, variables.$widthButtonS, variables.$heightButton, unset, unset, variables.$borderBox, variables.$borderRadiusAvatar);
+        color: variables.$colorSecondary;
+    }
+    & h3{
+        text-align: center;
+    }
+    & p{
+        font-weight: variables.$fontWeightSubTitle;
+    }
+}
+.sectionHeader{
+    @include mixins.flexBox(row, space-between);
+    @include mixins.container(unset, calc(variables.$width - 20px), unset, variables.$marginXs, 0 0 variables.$marginM 0);
+    & h2{
+        padding: variables.$paddingBorderL;
+    }
+    & div{
+        @include mixins.flexBox(row, flex-end, center);
+        width: variables.$widthSectionS;
+        & button{
+            @include mixins.container(variables.$colorQuaternary, variables.$widthButtonS, variables.$heightButton, variables.$marginXXs, unset, variables.$borderBox, variables.$borderRadiusAvatar);
+            color: variables.$colorSecondary;
+        }
+    }
+}
+.sectionBody{
+    @include mixins.flexBox(row, space-around);
+    width: variables.$width;
+    margin: variables.$marginXs;
+    & ul{
+        padding-left: variables.$paddingBorderM;
+    }
+    & div{
+        @include mixins.flexBox(column);
+        width: variables.$widthSection;
+        margin-bottom: variables.$marginXs;
+        margin: 0 auto;
+        & h3{
+            width: variables.$widthSection;
+            text-align: center;
+        }
+        & div{
+            & ul{
+                margin: variables.$marginS 0;
+            }
+            & p{
+                margin: variables.$marginS 0;
+            }
+            & a{
+                width: variables.$widthSection;
+                text-align: center;
+            }
+            & div{
+                width: variables.$widthSection;
+                margin: variables.$marginS 0;
+                text-align: center;
+            }
+        }
+    }
+}
+.margenInf{
+    margin-bottom: variables.$marginL;
+    padding-bottom: variables.$paddingBorderL;
+}
+.sectionExpLab{
+    background-color: variables.$colorQuinary;
+}
+.sectionProyectos{
+    background-color: variables.$colorQuinary;
+}
+footer{
+    width: variables.$width;
+    margin: variables.$marginL 0 variables.$marginXs;
+    text-align: center;
+}

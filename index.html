@@ -3,118 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="png" href="./imagenes/music_15509.png">
+    <script src="https://kit.fontawesome.com/bdec5d58ea.js" crossorigin="anonymous"></script>
     <title>Natalia Schwindt</title>
 </head>
     <body>
-        <header>
-            <section>
+        <main>
+            <nav class="sectionSocNet">
                 <h3>Natalia Schwindt</h3>
-                <nav>
-                    <!-- Redes Sociales -->
-                    <a href="https://www.facebook.com/" rel="noopener"class="fa fa-facebook" title="facebook" target="_blank">Facebook</a>
-                    <a href="https://www.instagram.com/?__coig_login=1" rel="noopener" class="fa fa-instagram" title="instagram" target="_blank">Instagram</a>
-                    <a href="naty8014@gmail.com" class="fa fa-email" title="e-mail" target="_blank">E-mail</a>
-                    <a href="#"><button>Botón Logout</button></a>
-                </nav>
-                    <!--Falta botón logout-->
-                <img src="./imagenes/banner.webp" alt="banner">
-                <div>    
-                    <img src="./imagenes/logoArgentinaPrograma.jpg" alt="logoArgProg">
-                    <p>#Yo Programo</p>
+                <div class="socialNetworks">
+                        <a href="https://www.facebook.com/" rel="noopener" title="facebook" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/?__coig_login=1" rel="noopener" title="instagram" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="naty8014@gmail.com" title="e-mail" target="_blank"><i class="fa-solid fa-square-envelope"></i></a>
+                        <button>Logout</button>
                 </div>
-                <form action="usuarios">
-                    <fieldset>
-                        <label for="name">Usuario</label>
-                        <input type="text" id="name" name="user" placeholder="Ingresa un nombre" required autofocus>
-                        <label for="pass">Password</label>
-                        <input type="password" id="pass" name="pass" placeholder="Ingresa una contraseña" required>
-                        <input type="submit">
-                    </fieldset>
-                </form>
-                <div>
-                    <img src="./imagenes/pefil.jpg" alt="imgPerfil" width="50">
+            </nav>
+            <header>
+                <div class="contentLogoLogin">
+                    <div>    
+                        <img src="./imagenes/logoArgentinaPrograma.jpg" alt="logoArgProg">
+                        <p>#Yo Programo</p>
+                    </div>
+                
+                    <div>
+                        <form action="#">
+                            <input type="text" name="user" placeholder="Usuario" required autofocus>
+                            <input type="password" name="pass" placeholder="Password" required>
+                            <button type="submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="contentProfile">
+                    <img src="./imagenes/avatar.jpg" alt="imgPerfil">
+                    <button><i class="fa-solid fa-pencil"></i></button>
                     <h3>Natalia Schwindt</h3>
-                    <a href="#"><button>Edición</button></a>
                     <p>Full Stack Developer Junior</p>
                 </div>
-                <div>
-                    <h2>Educación</h2>
-                    <h3>Full Stack Developer Junior</h3>
-                    <p>Argentina Programa #Yo Programo</p>
-                    <p>2021 - 2022</p>
-                    <a href="https://argentinaprograma.inti.gob.ar/" rel="noopener" target="_blank"><img src="./imagenes/logoArgentinaPrograma.jpg" alt="argProg"></a>
-                    <h3>Soporte Operativo para PC</h3>
-                    <p>Instituto Superior de Formación Docente y Técnica Nº48 - Coronel Suárez</p>
-                    <p>1999 - 2000</p>
-                    <a href="https://isfdyt48-bue.infd.edu.ar/sitio/" rel="noopener" target="_blank"><img src="./imagenes/logoInstSupNº48.png" alt="institutoNº48"></a>
-                    <a href="#"><button>Agregar</button></a>
-                    <a href="#"><button>Edición</button></a>
-                    <a href="#"><button>Eliminar</button></a>
+                <img src="./imagenes" alt="">
+            </header>
+            <section class="sectionEduc margenInf">
+                <div class="sectionHeader">
+                    
+                    <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
+                    <div>
+                        <button><i class="fa-solid fa-plus"></i></button>
+                        <button><i class="fa-solid fa-pencil"></i></button>
+                        <button><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
                 </div>
-                <div>
-                    <h2>Experiencia Laboral</h2>
-                    <h3>Simplia</h3>
-                    <p>Limpieza en Bancos</p>
-                    <p>2018 - Actualidad</p>
-                    <a href="https://www.simpliafacility.com/contacto-facility-solutions/" rel="noopener" target="_blank"><img src="./imagenes/logoSimplia.png" alt="logoSimplia"></a>
-                    <h3>Prosegur</h3>
-                    <p>Seguridad Privada</p>
-                    <p>2012 - 2016</p>
-                    <a href="https://www.prosegur.com.ar/personas" rel="noopener" target="_blank"><img src="./imagenes/logoProsegur.svg" alt="logoProsegur"></a>
-                    <a href="#"><button>Agregar</button></a>
-                    <a href="#"><button>Edición</button></a>
-                    <a href="#"><button>Eliminar</button></a>
-                </div>
-                <div>
-                    <h2>Hard Skills & Soft Skills - Idiomas</h2>
-                    <h3>Hard Skills</h3>
-                    <ul type="circle">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                        <li>Typescript</li>
-                        <li></li>
-                    </ul>
-                    <h3>Soft Skills</h3>
-                    <ul type="circle">
-                        <li>Trabajo en equipo</li>
-                        <li>Liderazgo</li>
-                        <li>Comunicación asertiva</li>
-                        <li>Atención al cliente</li>
-                        <li>Capacidad analítica y de resolución de problemas</li>
-                        <li>Atención al detalle</li>
-                        <li>Deseos de aprender y estar a la vanguardia</li>
-                        <li>Adaptabilidad, saber priorizar y manejo de tareas múltiples</li>
-                    </ul>
-                    <h3>Idiomas</h3>
-                    <ul type="circle">
-                        <li>Inglés técnico</li>
-                        <li>Ruso básico</li>
-                    </ul>
-                    <a href="#"><button>Agregar</button></a>
-                    <a href="#"><button>Edición</button></a>
-                    <a href="#"><button>Eliminar</button></a>
-                </div>
-                <div>
-                    <h2>Proyectos</h2>
-                    <h3>DCards</h3>
-                    <p>En proyecto</p>
-                    <a href="#" title="DCards"></a>
-                    <h3>onlysoncomic.com</h3>
-                    <p>En proyecto</p>
-                    <a href="#" title="onlysoncomic"></a>
-                    <h3>Proyecto propio</h3>
-                    <p>En proyecto</p>
-                    <a href="#" title="Qué comemos hoy?"></a>
-                    <a href="#"><button>Agregar</button></a>
-                    <a href="#"><button>Edición</button></a>
-                    <a href="#"><button>Eliminar</button></a>
+                <div class="sectionBody">
+                    <div>
+                        <h3>Full Stack Developer Junior</h3>
+                        <div>
+                            <div>
+                                <p>Argentina Programa #Yo Programo</p>
+                                <p>2021 - Actualidad</p>
+                            </div>
+                            <a href="https://argentinaprograma.inti.gob.ar/" rel="noopener" target="_blank"><img src="./imagenes/logoArgentinaPrograma.jpg" alt="argProg"></a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Curso de Desarrollo con Stack Mean/Mern</h3>
+                        <div>
+                            <div>
+                                <p>Talleres Don Web - Online</p>
+                                <p>2022</p>
+                            </div>
+                            <a href="https://talleres.donweb.com/" rel="noopener" target="_blank"><img src="./imagenes/logo-talleresdonweb.png" alt="tallDonWeb"></a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Soporte Operativo para PC</h3>
+                        <div>    
+                            <div>
+                                <p>Inst. Sup. de Form. Doc. y Téc. Nº48 - Cnel. Suárez</p>
+                                <p>1999 - 2000</p>
+                            </div>
+                            <a href="https://isfdyt48-bue.infd.edu.ar/sitio/" rel="noopener" target="_blank"><img src="./imagenes/logoInstSupNº48.png" alt="institutoNº48"></a>
+                        </div>
+                    </div>
                 </div>
             </section>
-        </header>
-        <footer>&copy;Natalia Schwindt - Todos los derechos reservados</footer>
+
+            <section class="sectionExpLab margenInf">
+                <div class="sectionHeader">
+                    <h2><i class="fa-solid fa-laptop-code"></i> Experiencia Laboral</h2>
+                    <div>
+                        <button><i class="fa-solid fa-plus"></i></button>
+                        <button><i class="fa-solid fa-pencil"></i></button>
+                        <button><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+                <div class="sectionBody">
+                    <div>
+                        <h3>Simplia</h3>
+                        <div>
+                            <div>
+                                <p>Limpieza en Bancos</p>
+                                <p>2018 - Actualidad</p>
+                            </div>
+                            <a href="https://www.simpliafacility.com/contacto-facility-solutions/" rel="noopener" target="_blank"><img src="./imagenes/logoSimplia.png" alt="logoSimplia"></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Prosegur</h3>
+                        <div>
+                            <div>
+                                <p>Seguridad Privada</p>
+                                <p>2012 - 2016</p>
+                            </div>
+                            <a href="https://www.prosegur.com.ar/personas" rel="noopener" target="_blank"><img src="./imagenes/logoProsegur.png" alt="logoProsegur" bgcolor="yellow"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sectionSkills margenInf">
+                <div class="sectionHeader">
+                    <h2><i class="fa-solid fa-users"></i> Hard Skills & Soft Skills - Idiomas</h2>
+                    <div>
+                        <a href="#"><button><i class="fa-solid fa-plus"></i></button></a>
+                        <a href="#"><button><i class="fa-solid fa-pencil"></i></button></a>
+                        <a href="#"><button><i class="fa-solid fa-trash-can"></i></button></a>
+                    </div>
+                </div>
+                <div class="sectionBody">
+                    <div>
+                        <h3>Hard Skills</h3>
+                        <div>
+                            <ul type="circle">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>SASS</li>
+                                <li>Boostrap</li>
+                                <li>Javascript</li>
+                                <li>Typescript</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Soft Skills</h3>
+                        <div>
+                            <ul type="circle">
+                                <li>Trabajo en equipo</li>
+                                <li>Liderazgo</li>
+                                <li>Comunicación asertiva</li>
+                                <li>Atención al cliente</li>
+                                <li>Capacidad analítica y de resolución de problemas</li>
+                                <li>Atención al detalle</li>
+                                <li>Deseos de aprender y estar a la vanguardia</li>
+                                <li>Adaptabilidad, saber priorizar y manejo de tareas múltiples</li>
+                                <li>Nociones de Scrum</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Idiomas</h3>
+                        <div>
+                            <ul type="circle">
+                                <li>Inglés básico</li>
+                                <li>Ruso básico</li>
+                            </ul>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+
+            <section class="sectionProyectos margenInf">
+                <div class="sectionHeader">
+                    <h2><i class="fa-solid fa-code"></i> Proyectos</h2>
+                    <div>
+                        <button><i class="fa-solid fa-plus"></i></button>
+                        <button><i class="fa-solid fa-pencil"></i></button>
+                        <button><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+                <div class="sectionBody">
+                    <div>
+                        <h3>DCards</h3>
+                        <div>
+                            <p>En proceso</p>
+                            <p>Esta es una página de tarjetas electrónicas. No sólo contiene los datos del comercio, sino que además se puede acceder a todos sus productos y comprarlos. Se puede gestionar el envío y pagar.</p>
+                            <a href="#" title="DCards"></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>onlysoncomic.com</h3>
+                        <div>
+                            <p>En proceso</p>
+                            <p>Esta es una página de comics. Consta de varias páginas sdonde se puede acceder a los capítulos, material extra y ponerse en contacto con la autora.</p>
+                            <a href="#" title="onlysoncomic"></a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Recetas para todos los días</h3>
+                        <div>
+                            <p>En proceso</p>
+                            <p>Esta es una página de recetas realizadas cotidianamente. Sirve como un recuerdo de recetas sencillas al momento de decidir qué cocinar todos los días. Pueden ver recetas, enviar recetas para que las agregue una vez probadas, o ponerse en contacto conmigo.</p>
+                            <a href="#" title="Recetas para todos los días"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>&copy;Natalia Schwindt - Todos los derechos reservados</footer>
+        </main>
     </body>
 </html>
