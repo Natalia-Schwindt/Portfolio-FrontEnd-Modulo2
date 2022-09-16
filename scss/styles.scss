@@ -23,6 +23,9 @@
 header{
     background-image: variables.$backgroundColor;
     @include mixins.container(unset, unset, variables.$heightSection, 0 0 150px);
+    & .clave{
+        @include mixins.position(variables.$positionChild, unset, unset, 538px, 982px);
+    }
 }
 .contentLogoLogin{
     @include mixins.flexBox(row, space-around);

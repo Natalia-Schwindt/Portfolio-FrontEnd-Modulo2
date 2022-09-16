@@ -31,6 +31,11 @@ header {
   height: 400px;
   margin: 0 0 150px;
 }
+header .clave {
+  position: relative;
+  bottom: 538px;
+  left: 982px;
+}
 
 .contentLogoLogin {
   display: flex;
