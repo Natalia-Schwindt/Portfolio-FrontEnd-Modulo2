@@ -1,4 +1,10 @@
 @use 'variables';
+@function progress($percents){
+    @return #{$percents * 1.8}deg;
+}
+@function progressBar($percents, $widthBar){
+    @return #{calc($widthBar / 100) * $percents}px;  
+}
 //globales
 @mixin flexBox($direction:unset, $justifyContent:unset, $alignItems:unset){
     display: flex;
@@ -22,4 +28,75 @@
     @if $border!=unset { border: $border; };
     @if $borderRadius!=unset { border-radius: $borderRadius; };
 }
-//proyecto
+@mixin mediaQuery($width: unset){
+        @media (min-width: $width){
+            @content;
+        }
+}
+@mixin circleProgress($title, $porcent, $color, $bgcolor:variables.$colorSecondary){
+    $progress: progress($porcent);
+    transform: rotate($progress);
+    background: linear-gradient(0deg, $color 50%, rgba($color, .2) 50%);
+    margin: auto;
+    position: relative;
+    &, &::before, &::after{
+        width: 100px;
+        height: 100px;
+    }
+    &, &::before{
+        border-radius: 50%;
+    }
+    &::before, &::after{
+        color: $color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        transform: rotate(-$progress);
+    }
+    &::before{
+        content: $porcent + '%';
+        background: $bgcolor content-box;
+        padding: 10%;
+        line-height: 65px;
+        box-sizing: border-box;
+    }
+    &::after{
+        content: $title;
+        background: linear-gradient(transparent 50%, $bgcolor 50%);
+        line-height: 116px;        
+    }
+}
+@mixin sidebar($title, $percent, $color, $widthBar: 250){
+    $widthBarMobile: $widthBar;
+    width: #{$widthBar}px; 
+    height: 25px;
+    background: rgba($color, .3);
+    position: relative;
+    border-radius: 5px;
+    margin-top:20px;
+    @include mediaQuery(variables.$breakPointTablet){
+        $widthBar: 500;
+        width: #{$widthBar}px; 
+    }
+    &::after{
+        content: $title + ' ' + $percent + '%';
+        width: progressBar($percent, $widthBarMobile);
+        height: 25px;
+        background: $color;
+        position: absolute;
+        top:0;
+        left:0;
+        border-radius: 5px;
+        font-size: 10px;
+        font-weight: 700;
+        padding-left: 10px;
+        box-sizing: border-box;
+        @include mediaQuery(variables.$breakPointTablet){
+            $widthBar: 500;
+            width: progressBar($percent, $widthBar);
+            font-size: 14px;
+            font-weight: 900;
+         }
+    }
+}

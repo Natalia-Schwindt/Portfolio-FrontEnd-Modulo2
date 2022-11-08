@@ -15,8 +15,17 @@ $colorQuinary: #c86eec;
 // font size
 $fontSizeTitle: 32px;
 $fontSizeSubTitle: 24px;
+$fontSizeLargeParagraph: 20px;
 $fontSizeParagraph: 16px;
-$fontSizeText: 12px;
+$fontSizeText: 14px;
+$fontSizeTitleTablet: 24px;
+$fontSizeSubTitleTablet: 18px;
+$fontSizeParagraphTablet: 14px;
+$fontSizeTextTablet: 12px;
+$fontSizeTitleMobile: 18px;
+$fontSizeSubtitleMobile: 14px;
+$fontSizeParagraphMobile: 12px;
+$fontSizeTextMobile: 10px;
 
 // font weight
 $fontWeightTitle: 700;
@@ -31,68 +40,26 @@ $borderRadiusAvatar: 50%;
 // border box
 $borderBox: 1px solid #000;
 
+// break point
+$breakPointMobile: 300px;
+$breakPointTablet: 600px;
+$breakPointDesktop: 1024px;
+$breakPointLargeDesktop: 1900px;
+
+// screen size
+$screenSizeMobile: 300px;
+$screenSizeTablet: 600px;
+$screenSizeDesktop: 1024px;
+$screenSizeLargeDesktop: 100%;
+
 // padding
-$paddingBorder: 5px;
-$paddingBorderM: 10px;
-$paddingBorderL: 15px;
 $paddingButton: 2px 5px;
-//$paddingSocNet: 0px 5px;
-
-// margin
-$marginXXs: 5px;
-$marginXs: 10px;
-//$marginExpLab: 5px auto;
-$marginS: 15px;
-$marginM: 20px;
-$marginL: 25px;
-//$marginXL: 50px;
-
-// width
-$width: 100%;
-$widthForm: 50%;
-$widthLogoArgProg: 20%;
-//$widthLogoArgProgM: 30%;
-$widthInput: 150px;
-//$widthButton: 20px;
-$widthButtonS: 25px;
-$widthLogin: 50px;
-$widthAvatar: 150px;
-$widthSectionS: 25%;
-$widthSection: 90%;
-
-// height
-$heightSection: 400px;
-//$heightContainer: 100%;
-//$heightButtonXs: 20px;
-$heightButton: 25px;
-
-// media query
-$breakpointMobile: 480px;
-$breakpointTablet: 768px;
-$breakpointDesktop: 1024px;
 
 // background color
-$backgroundColor: -webkit-linear-gradient(top left, rgba(0, 0, 255, .9), rgba(255, 0, 0, .9));
+$gradient: -webkit-linear-gradient(top left, rgba(0, 0, 255, .9), rgba(255, 0, 0, .9));
 
-// position
-$positionFather: absolute;
-$positionChild: relative;
-
-// overflow
-//$overflow: hidden;
-
-// cursor
-//$cursor: pointer;
-
-// visibility
-//$visibilityTrue: visible;
-//$visibilityFalse: hidden;
-
-// text shadow
-//$textShadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-// text indent
-//$textIndent: 25px;
-
-// box shadow
-//$boxShadow: 0 0 10px rgba(0, 0, 0, 0.5);
+// height
+$bannerMobile: 150px;
+$bannerTablet: 200px;
+$bannerDesktop: 300px;
+$bannerLargeDesktop: 400px;

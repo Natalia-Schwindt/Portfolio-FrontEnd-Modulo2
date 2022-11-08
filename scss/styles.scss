@@ -1,3 +1,4 @@
+
 @use 'variables';
 @use 'mixins';
 *{
@@ -6,133 +7,333 @@
     border: 0;
     box-sizing: border-box;
 }
-.sectionSocNet{
-        @include mixins.flexBox(row, space-between);
-        @include mixins.position(variables.$positionChild, 5px);
-        padding: 5px;
+body{
+    background-color: variables.$colorPrimary;
+    font-family: variables.$fontParagraph;
 }
-.socialNetworks{
-    & a{
-        color: variables.$colorTertiary;
+main{
+    background-color: variables.$colorSecondary;
+    color: variables.$colorPrimary;
+    width: variables.$screenSizeMobile;
+    @include mixins.mediaQuery(variables.$breakPointTablet){
+    width: variables.$screenSizeTablet;
     }
-    & button{
-        @include mixins.container(variables.$colorTertiary, unset, unset, unset, variables.$paddingButton, variables.$borderBox, variables.$borderRadiusButton);
-        color: variables.$colorSecondary;
+    @include mixins.mediaQuery(variables.$breakPointDesktop){
+    width: variables.$screenSizeDesktop;
+    }
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+    width: variables.$screenSizeLargeDesktop;
+    }
+}
+nav{
+    @include mixins.flexBox(row, space-between);
+    padding: 0 5px;
+    & h3{
+        font-size: variables.$fontSizeParagraphMobile;
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeLargeParagraph;
+        }
+    }
+    & div{
+        @include mixins.flexBox(row, flex-end, center);
+        width: 32%;
+        & a{
+            color: variables.$colorTertiary;
+            margin-right: 2px;
+            @include mixins.mediaQuery(variables.$breakPointDesktop){
+                font-size: variables.$fontSizeSubTitle;
+            }
+        }
+        & button{
+            @include mixins.container(variables.$colorTertiary, unset, unset, unset, variables.$paddingButton, variables.$borderBox, variables.$borderRadiusButton);
+            color: variables.$colorSecondary;
+            font-size: variables.$fontSizeTextMobile;
+            display: none;
+        }
     }
 }
 header{
-    background-image: variables.$backgroundColor;
-    @include mixins.container(unset, unset, variables.$heightSection, 0 0 150px);
-    & .clave{
-        @include mixins.position(variables.$positionChild, unset, unset, 538px, 982px);
+    background: variables.$gradient;
+    @include mixins.container(unset, unset, variables.$bannerMobile, 0 0 100px);
+    position: relative;
+    @include mixins.mediaQuery(variables.$breakPointTablet){
+    @include mixins.container(unset, unset, variables.$bannerTablet, 0 0 100px);
+    }
+    @include mixins.mediaQuery(variables.$breakPointDesktop){
+    @include mixins.container(unset, unset, variables.$bannerDesktop, 0 0 150px);
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+    @include mixins.container(unset, unset, variables.$bannerLargeDesktop, 0 0 200px);
+    }
     }
 }
 .contentLogoLogin{
-    @include mixins.flexBox(row, space-around);
-    @include mixins.position(variables.$positionChild, 10px);
-    margin: variables.$marginXs;
+    @include mixins.flexBox(row, space-between);
+    @include mixins.position(relative, 5px);
+    padding: 5px;
     & div{
-        width: variables.$widthForm;
+        @include mixins.flexBox(column, flex-start, flex-start);
         & img{
-            width: variables.$widthLogoArgProg;
+            width: 50px;
+            @include mixins.mediaQuery(variables.$breakPointTablet){
+                width: 70px;
+                }
+            @include mixins.mediaQuery(variables.$breakPointDesktop){
+                width: 100px;
+                }
+            @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+                width: 150px;
+                }
+            }
         }
         & p{
-            margin-left: variables.$marginXs;
+            font-size: 8px;
             color: variables.$colorSecondary;
+            @include mixins.mediaQuery(variables.$breakPointTablet){
+                font-size: 10px;
+            }
+            @include mixins.mediaQuery(variables.$breakPointDesktop){
+                font-size: 14px;
+            }
+            @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+                font-size: 18px;
+            }
         }
-        & form{
-            @include mixins.flexBox(row, right);
+        & Form{
+            @include mixins.flexBox(column, flex-start, flex-end);
             & input{
-                @include mixins.container(unset, variables.$widthInput, variables.$heightButton, 0 variables.$marginXs 0 0, variables.$paddingBorder, variables.$borderBox, variables.$borderRadiusButton);
+                width: 50%;
+                border: variables.$borderBox;
+                border-radius: variables.$borderRadiusButton;
+                font-size: 10px;
+                padding-left: 2px;
+                margin-bottom: 2px;
+                @include mixins.mediaQuery(variables.$breakPointDesktop){
+                    width: 100%;
+                    font-size: 14px;
+                }
+                @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+                    width: 100%;
+                    font-size: 18px;
+                }
             }
             & button{
-                @include mixins.container(variables.$colorTertiary, variables.$widthLogin, variables.$heightButton, unset, variables.$paddingButton, variables.$borderBox, variables.$borderRadiusButton);
+                font-size: 9px;
+                @include mixins.container(variables.$colorTertiary, unset, unset, unset, variables.$paddingButton, variables.$borderBox, variables.$borderRadiusButton);
                 color: variables.$colorSecondary;
+                @include mixins.mediaQuery(variables.$breakPointDesktop){
+                    font-size: 14px;
+                }
+                @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+                    font-size: 18px;
+                }
             }
         }
-    }    
-}
+    }
 .contentProfile{
-    @include mixins.position(variables.$positionChild, 235px, unset, 25px, 15px);
-    width: 190px;
+    @include mixins.flexBox(column, unset, center);
+    @include mixins.position(relative, 45px);
+    width: 140px;
+    padding-left: 5px;
+    font-size: 10px;
+    @include mixins.mediaQuery(variables.$breakPointTablet){
+        font-size: variables.$fontSizeText;
+        padding-left: 10px;
+        width: 200px;
+    }
+    @include mixins.mediaQuery(variables.$breakPointDesktop){
+        font-size: variables.$fontSizeText;
+        padding-left: 10px;
+        width: 200px;
+    }
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+        font-size: variables.$fontSizeParagraph;
+        padding-left: 10px;
+        width: 250px;
+    }
     & img{
-        @include mixins.position(variables.$positionChild, 5px, unset, 30px, 15px);
-        width: variables.$widthAvatar;
+        width: 80px;
         border-radius: variables.$borderRadiusAvatar;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            width: 100px;
+            margin-top: 20%;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            width: 120px;
+            margin-top: 60%;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            width: 150px;
+            margin-top: 75%;
+        }
     }
     & button{
-        @include mixins.container(variables.$colorQuaternary, variables.$widthButtonS, variables.$heightButton, unset, unset, variables.$borderBox, variables.$borderRadiusAvatar);
-        color: variables.$colorSecondary;
+        width: 12px;
+        font-size: 12px;
+        margin-left: 80px;
+        padding: unset;
+        display: none;
     }
-    & h3{
-        text-align: center;
+}
+.clave{
+    width: 90px;
+    margin-right: 2px;
+    @include mixins.position(absolute, unset, unset, 0, 210px);
+    @include mixins.mediaQuery(variables.$breakPointTablet){
+        width: 120px;
+        @include mixins.position(absolute, unset, unset, 0, 480px);
     }
-    & p{
-        font-weight: variables.$fontWeightSubTitle;
+    @include mixins.mediaQuery(variables.$breakPointDesktop){
+        width: 180px;
+        @include mixins.position(absolute, unset, unset, 0, 844px);
+    }
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+        width: 250px;
+        @include mixins.position(absolute, unset, unset, 0, calc(100% - 250px));
     }
 }
 .sectionHeader{
     @include mixins.flexBox(row, space-between);
-    @include mixins.container(unset, calc(variables.$width - 20px), unset, variables.$marginXs, 0 0 variables.$marginM 0);
+    padding: 5px;
     & h2{
-        padding: variables.$paddingBorderL;
+        font-size: variables.$fontSizeTitleMobile;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            font-size: variables.$fontSizeTitleTablet;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeTitle;
+            padding-left: 10px;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            margin: 20px 0;
+        }
     }
     & div{
-        @include mixins.flexBox(row, flex-end, center);
-        width: variables.$widthSectionS;
         & button{
-            @include mixins.container(variables.$colorQuaternary, variables.$widthButtonS, variables.$heightButton, variables.$marginXXs, unset, variables.$borderBox, variables.$borderRadiusAvatar);
-            color: variables.$colorSecondary;
+            display: none;
         }
     }
 }
 .sectionBody{
-    @include mixins.flexBox(row, space-around);
-    width: variables.$width;
-    margin: variables.$marginXs;
-    & ul{
-        padding-left: variables.$paddingBorderM;
+    @include mixins.flexBox(column, center, center);
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+        @include mixins.flexBox(row, space-evenly, flex-start);
     }
-    & div{
-        @include mixins.flexBox(column);
-        width: variables.$widthSection;
-        margin-bottom: variables.$marginXs;
-        margin: 0 auto;
-        & h3{
-            width: variables.$widthSection;
-            text-align: center;
-        }
-        & div{
-            & ul{
-                margin: variables.$marginS 0;
-            }
-            & p{
-                margin: variables.$marginS 0;
-            }
-            & a{
-                width: variables.$widthSection;
-                text-align: center;
-            }
-            & div{
-                width: variables.$widthSection;
-                margin: variables.$marginS 0;
-                text-align: center;
-            }
+    .card{
+        //position: absolute;
+        width: 80%;
+        padding: 5px 0;
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            width: 26%;
+            margin: 15px 0;
         }
     }
+    .html5{
+        @include mixins.circleProgress("HTML5", 80, #E44D26);
+    }
+    .css3{
+        @include mixins.circleProgress("CSS3", 70, #379AD6);
+    }
+    .sass{
+        @include mixins.circleProgress("SASS", 90, #CD669B);
+    }
+    .boostrap{
+        @include mixins.circleProgress("BOOTSTRAP", 10, #790FF7);
+    }
+    .javascript{
+        @include mixins.circleProgress("JAVASCRIPT", 50, #F0DB4F);
+    }
+    .typescript{
+        @include mixins.circleProgress("TYPESCRIPT", 50, #0078CF);
+    }
+    .angular{
+        @include mixins.circleProgress("ANGULAR", 20, #DD1A15);
+    }
+    .mysql{
+        @include mixins.circleProgress("MySQL", 50, #017A9D);
+    }
+    .trabajoEnEquipo{
+        @include mixins.sidebar("Trabajo en equipo", 80, #f8dd2b);
+    }
+    .liderazgo{
+        @include mixins.sidebar("Liderazgo", 90, #4747e9);
+    }
+    .comunicacionAsertiva{
+        @include mixins.sidebar("Comunicación asertiva", 90, #0bd21f);
+    }
+    .atencionAlCliente{
+        @include mixins.sidebar("Atención al cliente", 90, #d94fb9);
+    }
+    .capacidadAnalitica{
+        @include mixins.sidebar("Capacidad analítica", 50, #0078CF);
+    }
+    .atencionAlDetalle{
+        @include mixins.sidebar("Atención al detalle", 95, #CD669B);
+    }
+    .deseosDeAprender{
+        @include mixins.sidebar("Deseos de aprender", 98, #DD1A15);
+    }
+    .adaptabilidad{
+        @include mixins.sidebar("Adaptabilidad", 60, #f8dd2b);
+    }
+    .scrum {
+        @include mixins.sidebar("SCRUM", 40, #0bd21f);
+    }
+    & h3{
+        font-size: variables.$fontSizeSubtitleMobile;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            font-size: variables.$fontSizeSubTitleTablet;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeSubTitle;
+        }
+    }
+    & p{
+        font-size: variables.$fontSizeParagraphMobile;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            font-size: variables.$fontSizeParagraphTablet;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            font-size: variables.$fontSizeParagraph;
+        }
+        @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+            font-size: variables.$fontSizeLargeParagraph;
+        }
+    }
+    & img{
+        width: 50px;
+        margin-bottom: 2px;
+        @include mixins.mediaQuery(variables.$breakPointTablet){
+            width: 70px;
+            margin-top: 2px;
+        }
+        @include mixins.mediaQuery(variables.$breakPointDesktop){
+            width: 100px;
+            margin-top: 5px;
+        }
+    }
 }
-.margenInf{
-    margin-bottom: variables.$marginL;
-    padding-bottom: variables.$paddingBorderL;
+.idiomas{
+    margin: 20px 0 10px;
 }
-.sectionExpLab{
+hr{
     background-color: variables.$colorQuinary;
-}
-.sectionProyectos{
-    background-color: variables.$colorQuinary;
+    width: 90%;
+    height: 2px;
+    margin: 20px auto;
 }
 footer{
-    width: variables.$width;
-    margin: variables.$marginL 0 variables.$marginXs;
+    background: variables.$gradient;
+    font-size: variables.$fontSizeTextMobile;
     text-align: center;
+    margin: 8px 0 5px;
+    color: variables.$colorSecondary;
+    @include mixins.mediaQuery(variables.$breakPointTablet){
+        font-size: variables.$fontSizeTextTablet;
+    }
+    @include mixins.mediaQuery(variables.$breakPointDesktop){
+        font-size: variables.$fontSizeText;
+    }
+    @include mixins.mediaQuery(variables.$breakPointLargeDesktop){
+        font-size: variables.$fontSizeParagraph;
+    }
 }
